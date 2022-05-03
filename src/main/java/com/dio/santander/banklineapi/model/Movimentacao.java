@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "tab_movimentacao")
-public class Movimentação {
+public class Movimentacao {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,4 +33,7 @@ public class Movimentação {
 
   @Enumerated(EnumType.STRING)
   private MovimentaçãoTipo tipo;
+
+  @Column(name = "id_conta")
+  private Integer idConta;
 }
